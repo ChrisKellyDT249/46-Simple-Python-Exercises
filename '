@@ -1,0 +1,71 @@
+'''
+Exercise 7.Define a function reverse() that computes the reversal of a string.
+For example, reverse("I am testing") should return the string "gnitset ma I".
+'''
+
+def reverse(a):
+    print("the reversed string is\n", a[::-1])
+
+string1 = input("enter a string to reverse\t")
+reverse(string1)ter file contents here
+##########################################################################
+'''
+Exercise 8.Define a function is_palindrome() that recognizes palindromes (i.e. words that look the same written backwards).
+For example, is_palindrome("radar") should return True.
+'''
+
+def palindrome(a):
+    rev = a[::-1]
+    if a == rev:
+        print("that's a palindrome")
+    else:
+        print("that's not a palindrome")
+
+string1 = input("enter a word to see if its a palindrome\t")
+palindrome(string1)
+########################################################################
+'''
+Exercise 9.Write a function is_member() that takes a value (i.e. a number, string, etc) x
+and a list of values a, and returns True if x is a member of a, False otherwise.
+(Note that this is exactly what the in operator does, but for the sake of the exercise
+you should pretend Python did not have this operator.)
+'''
+
+def ismember(a, b):
+    for i in a:
+        for n in i:
+            if b == n:
+                return True
+            else:
+                continue
+
+
+string1 = input("enter a string\t")
+value1 = input("enter a value to check\t")
+
+if ismember(string1, value1)== True:
+    print("yes thats a member")
+else:
+    print("thats not a member")
+###############################################################################
+'''
+Exercise 10.Define a function overlapping() that takes two lists and returns True if they have at least one member
+in common, False otherwise. You may use your is_member() function, or the in operator, but for the
+sake of the exercise, you should (also) write it using two nested for-loops.
+'''
+
+def overlapping(a,b):
+    for i in a:
+        for n in b:
+            if i==n:
+                print("overlapping",i, n)
+                break
+            else:
+                continue
+
+
+list1 = list(input("enter a list\t"))
+list2 = list(input("enter another list\t"))
+print(list1)
+print(list2)
+overlapping(list1, list2)
